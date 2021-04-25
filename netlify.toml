@@ -2,3 +2,7 @@
   command = "go build -o functions/dynamic-css main.go"
   functions = "functions"
   publish = "./"
+
+[[redirects]]
+  from = "/"
+  to = "/.netlify/functions/dynamic-css"
