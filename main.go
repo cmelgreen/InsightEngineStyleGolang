@@ -11,8 +11,7 @@ import (
 	"github.com/aws/aws-lambda-go/lambda"
 )
 
-const cssTemplate = `
-.text{
+const cssTemplate = `.text{
 	color: #{{.Color}};
 }
 `
@@ -41,6 +40,7 @@ func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*event
 
 	return &events.APIGatewayProxyResponse{
 		StatusCode: 200,
+		Headers: map[string]string{"Content-type": "text/css"},
 		Body:       css.String(),
 	}, nil
 }
