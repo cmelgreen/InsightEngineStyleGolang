@@ -1,4 +1,4 @@
 [build]
-  command = "GOBIN=$(pwd)/functions go install ./..."
+  command = "go install ./... && go build -o functions/dynamic-css main.go"
   functions = "functions"
   publish = "./"
