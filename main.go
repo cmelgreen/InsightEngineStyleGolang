@@ -11,7 +11,24 @@ import (
 	"github.com/aws/aws-lambda-go/lambda"
 )
 
-const cssTemplate = `.text{color:#{{.Color}};}`
+const cssTemplate = `
+.mb-header{
+	background:{{.Color}};
+}
+
+.mb-logo{
+	padding: .4em !important;
+	display: flex !important;
+}
+
+input.mb-query{
+	height: 30px;
+	background-image: url({{.Logo}});
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: -4px 50%;
+}
+`
 
 type cssParams struct {
 	Logo string
