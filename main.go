@@ -12,26 +12,34 @@ import (
 )
 
 const cssTemplate = `
+{{if .Color}}
 .mb-header{
 	background:{{.Color}};
 }
+{{end}}
 
+{{if .Logo}}
 .mb-logo{
+	content:url({{.Logo}});
 	padding: .4em !important;
 	display: flex !important;
 }
+{{end}}
 
+{{if .Icon}}
 input.mb-query{
 	height: 30px;
-	background-image: url({{.Logo}});
+	background-image: url({{.Icon}});
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: -4px 50%;
 }
+{{end}}
 `
 
 type cssParams struct {
 	Logo string
+	Icon string
 	Color string
 }
 
