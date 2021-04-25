@@ -11,10 +11,7 @@ import (
 	"github.com/aws/aws-lambda-go/lambda"
 )
 
-const cssTemplate = `.text{
-	color: #{{.Color}};
-}
-`
+const cssTemplate = `.text{color:#{{.Color}};}`
 
 type cssParams struct {
 	Logo string
