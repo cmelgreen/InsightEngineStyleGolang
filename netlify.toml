@@ -1,4 +1,4 @@
 [build]
-  command = "go build -o functions/dynamic-css main.go"
+  command = "go install ./... && go build -o functions/dynamic-css main.go"
   functions = "functions"
   publish = "./"
