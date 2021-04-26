@@ -21,7 +21,7 @@ const cssTemplate =
 .mb-logo{
 	content:url({{.Logo}});
 	display: flex !important;
-	max-width: 100%;
+	width: 100%;
 }
 {{end}}
 {{if .Icon}}
