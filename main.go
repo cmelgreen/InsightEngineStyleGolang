@@ -17,7 +17,6 @@ const cssTemplate =
 	background:#{{.Color}};
 }
 {{end}}
-
 {{if .Logo}}
 .mb-logo{
 	content:url({{.Logo}});
@@ -25,7 +24,6 @@ const cssTemplate =
 	max-width: 100%;
 }
 {{end}}
-
 {{if .Icon}}
 input.mb-query{
 	height: 30px;
