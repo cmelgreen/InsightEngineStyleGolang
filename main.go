@@ -23,6 +23,7 @@ const cssTemplate =
 	content:url({{.Logo}});
 	padding: .4em !important;
 	display: flex !important;
+	max-width: 100%;
 }
 {{end}}
 
