@@ -6,5 +6,7 @@
 [[redirects]]
   from = "/"
   to = "/.netlify/functions/dynamic-css"
+
+[[redirects]]
   from = "/.netlify/functions/cors-proxy"
   to = "/cors-proxy"
