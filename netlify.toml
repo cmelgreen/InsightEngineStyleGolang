@@ -1,8 +1,10 @@
 [build]
-  command = "go build -o functions/dynamic-css main.go"
+  command = "go build -o functions/dynamic-css functions/dynamicCSS/main.go && go build -o functions/cors-proxy functions/corsProxy/main.go"
   functions = "functions"
   publish = "./"
 
 [[redirects]]
   from = "/"
   to = "/.netlify/functions/dynamic-css"
+  from = "/.netlify/functions/cors-proxy"
+  to = "/cors-proxy"
