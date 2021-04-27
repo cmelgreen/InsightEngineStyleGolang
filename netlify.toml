@@ -3,7 +3,7 @@
   publish = "./"
 
 [functions]
-    directiory = "/functions
+    directiory = "/functions"
 
 [[redirects]]
   from = "/"
