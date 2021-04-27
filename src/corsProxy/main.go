@@ -18,6 +18,7 @@ func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*event
 	url := request.QueryStringParameters["url"]
 
 	response, err := http.Get(url)
+	
     if err != nil {
 		return &events.APIGatewayProxyResponse{
 			StatusCode: 404,
@@ -30,14 +31,17 @@ func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*event
 		return &events.APIGatewayProxyResponse{
 			StatusCode: 404,
 		}, err
-    }
+	}
+	
+	contentType := response.Header.Get("Content-type")
 
 	return &events.APIGatewayProxyResponse{
 		StatusCode: 200,
 		Headers: map[string]string{
+			"Content-type": contentType,
 			"Access-Control-Allow-Origin": "*",
 			"Access-Control-Allow-Headers": "*",
-			"X-Content-Type-Options": "nosniff",
+			//"X-Content-Type-Options": ,
 		},
 		Body:	base64.StdEncoding.EncodeToString(bytes),
 		IsBase64Encoded: true,
