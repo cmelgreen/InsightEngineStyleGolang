@@ -9,3 +9,8 @@
 [[redirects]]
     from = "/cors-proxy"
     to = "/.netlify/functions/cors-proxy"
+
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
