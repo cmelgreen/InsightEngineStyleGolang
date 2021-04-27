@@ -8,5 +8,5 @@
   to = "/.netlify/functions/dynamic-css"
 
 [[redirects]]
-  from = "/.netlify/functions/cors-proxy"
-  to = "/cors-proxy"
+  from = "/cors-proxy"
+  to = "/.netlify/functions/cors-proxy"
