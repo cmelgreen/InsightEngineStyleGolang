@@ -1,4 +1,4 @@
-package dynamicCSS
+package main
 
 import (
 	"bytes"
