@@ -1,14 +1,11 @@
 [build]
-  command = "make build"
-  publish = "./"
-
-[functions]
-    directiory = "/functions"
+    command = "make build"
+    functions = "/functions"
 
 [[redirects]]
-  from = "/"
-  to = "/.netlify/functions/dynamic-css"
+    from = "/"
+    to = "/.netlify/functions/dynamic-css"
 
 [[redirects]]
-  from = "/cors-proxy"
-  to = "/.netlify/functions/cors-proxy"
+    from = "/cors-proxy"
+    to = "/.netlify/functions/cors-proxy"
